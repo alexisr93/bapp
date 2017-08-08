@@ -1,0 +1,18 @@
+1.Start/Stop/Restart mongoDB
+
+    sudo service mongodb start
+
+    sudo service mongodb stop
+
+    sudo service mongodb restart
+
+2. Start node server
+
+    nose server.js
+
+
+3. To use mongo
+
+    mongo
+
+4. Database name is bappDB nvm its called mean-dev :(

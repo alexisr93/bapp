@@ -1,0 +1,112 @@
+{
+  student_id: 10000000,
+  first_name: '',
+  last_name: '',
+  grade: '',
+  school: '',
+  class_schedule: {
+    period_1: {
+      teacher_lastname: '',
+      room_number: '',
+      course_id: ''
+    },
+    period_2: {
+      teacher_lastname: '',
+      room_number: '',
+      course_id: ''
+    },
+    period_3: {
+      teacher_lastname: '',
+      room_number: '',
+      course_id: ''
+    },
+    period_4: {
+      teacher_lastname: '',
+      room_number: '',
+      course_id: ''
+    },
+    period_5: {
+      teacher_lastname: '',
+      room_number: '',
+      course_id: ''
+    },
+    period_6: {
+      teacher_lastname: '',
+      room_number: '',
+      course_id: ''
+    },
+    period_7: {
+      teacher_lastname: '',
+      room_number: '',
+      course_id: ''
+    }
+  },
+  incidents: {
+    referral_incidents: {
+      incident_id: '',
+      referring_staff: '',
+      class_period: '',
+      date_of_incident: '',
+      date_of_referral: '',
+      problem_behavior: {
+        lack_of_work: 0,
+        unprepared: 0,
+        off_task: 0,
+        misconduct: 0,
+        throwing_objects: 0,
+        cheating: 0,
+        defiant_disobedient: 0,
+        gum_chewing: 0,
+        disrespectful: 0,
+        tardy: 0,
+        profanity: 0,
+        physical_aggression: 0,
+        harassment: 0,
+        bullying: 0,
+        dress_code_violation: 0,
+        inapp_display_of_affection: 0,
+        electronics_violation: 0,
+        cheating_plagiarism: 0,
+        technology_violation: 0,
+        property_misuse: 0,
+        other: ''
+      },
+      specific_information: '',
+      previous_teacher_intervention: {
+        student_warning: 0,
+        parent_note_by_teacher: 0,
+        individual_academic_plan: 0,
+        parent_contact_by_teacher: 0,
+        parent_conference_with_teacher: 0,
+        previous_referral_to_office: 0
+      },
+      action_taken_by_administration: {
+        conference_with_student: 0,
+        parent_contact: 0,
+        detention: 0,
+        in_school_suspension: 0,
+        out_of_school_suspension: 0,
+        counselor_referral: 0,
+        campus_beautification: 0,
+        behavior_contract: 0,
+        attendance_contract: 0,
+        other: ''
+      },
+      parent_requests: ''
+    },
+    other_incidents: {
+      incident_id: '',
+      reporting_staff: '',
+      date_of_incident: '',
+      class_period: '',
+      teacher_comments: [''],
+      admin_comments: ['']
+    }
+  },
+  image: {
+    url: '',
+    type: '',
+    size: '',
+    data: ''
+  }
+}

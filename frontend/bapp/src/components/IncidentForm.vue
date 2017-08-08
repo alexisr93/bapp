@@ -1,0 +1,153 @@
+<template>
+  <div>
+    <form class="ui form" id="main-form">
+      <h4 class="ui dividing header">Incident Information</h4>
+      <div class="field">
+        <label> Student Name</label>
+        <div class="three fields">
+          <div class="field">
+            <input type="text" name="student[first-name]" placeholder="First Name">
+          </div>
+          <div class="field">
+            <input type="text" name="student[middle-name]" placeholder="Middle Name">
+          </div>
+          <div class="field">
+            <input type="text" name="student[last-name]" placeholder="Last Name">
+          </div>
+        </div>
+      </div>
+      <div class="two fields">
+        <div class="field">
+          <label>Grade</label>
+          <select class="ui fluid dropdown">
+            <option value=""></option>
+            <option value="AL">6</option>
+            <option value="AK">7</option>
+            <option value="AZ">8</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Incident Type</label>
+          <select class="ui fluid dropdown">
+            <option value=""></option>
+            <option value="Referral">Referral</option>
+            <option value="Other">Other</option>
+
+          </select>
+        </div>
+      </div>
+      <div class="four fields">
+        <div class="field">
+          <label>Date of Incident</label>
+          <select class="ui fluid dropdown">
+            <option value="">Month</option>
+            <option value="Jan">January</option>
+            <option value="Feb">February</option>
+            <option value="Mar">March</option>
+            <option value="Apr">April</option>
+            <option value="May">May</option>
+            <option value="Jun">June</option>
+            <option value="Jul">July</option>
+            <option value="Aug">August</option>
+            <option value="Sep">September</option>
+            <option value="Oct">October</option>
+            <option value="Nov">November</option>
+            <option value="Dec">December</option>
+          </select>
+        </div>
+        <div class="field" id="in-margin">
+          <input type="text" name="Day" placeholder="Day">
+        </div>
+        <div class="field" id="in-margin">
+          <input type="text" name="Year" placeholder="Year">
+        </div>
+        <div class="field">
+          <label>Class Period</label>
+          <select class="ui fluid dropdown">
+            <option value=""></option>
+            <option value="Jan">1</option>
+            <option value="Feb">2</option>
+            <option value="Mar">3</option>
+            <option value="Apr">4</option>
+            <option value="May">5</option>
+            <option value="Jun">6</option>
+            <option value="Jul">7</option>
+          </select>
+        </div>
+      </div>
+      <div class="field">
+        <label>Specific Behaviors</label>
+        <select name="skills" class="ui fluid dropdown" multiple="">
+          <option value=""></option>
+          <option value="lack_of_work">Lack of Work</option>
+          <option value="unprepared">Unprepared</option>
+          <option value="misconduct">Misconduct</option>
+          <option value="throwing_objects">Throwing Objects</option>
+          <option value="cheating">Cheating</option>
+          <option value="defiant_disobedient">Defiant/Disobedient</option>
+          <option value="gum_chewing">Gum Chewing</option>
+          <option value="disrespectful">Disrespectful</option>
+          <option value="tardy">Tardy</option>
+          <option value="profanity">Profanity</option>
+          <option value="physical_agression">Physical Aggression</option>
+          <option value="harassment">Harassment</option>
+          <option value="bullying">Bullying</option>
+          <option value="dress_code_violation">Dress Code Violation</option>
+          <option value="inapp_display_of_affection">Inappropriant Display of Affection</option>
+          <option value="electronics_violation">Electronics Violation</option>
+          <option value="plagiarism">Plagiarism</option>
+          <option value="technology_violation">Technology Violation</option>
+          <option value="propery_misuse">Property Misuse</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Previous Interventions</label>
+        <select name="skills" class="ui fluid dropdown" multiple="">
+          <option value=""></option>
+          <option value="student_warning">Student Warning</option>
+          <option value="parent_note_by_teacher">Parent Note By Teacher</option>
+          <option value="indivdual_academic_plan">Indvidual Academic Plan</option>
+          <option value="parent_contact_by_teacher">Parent Contact By Teacher</option>
+          <option value="parent_conference_with_teacher">Parent Conference With Teacher</option>
+          <option value="previous_referral_to_office">Previous Referral To Office</option>
+        </select>
+      </div>
+      <div class="ui form">
+        <div class="field">
+          <label>Specific Incident Information</label>
+          <textarea></textarea>
+        </div>
+      </div>
+      <div class="field" id="bot-buttons">
+        <h4 class="ui dividing header"></h4>
+        <div class="ui button" tabindex="">Submit</div>
+        <div class="ui button" tabindex="">Reset Form</div>
+      </div>
+
+
+    </form>
+
+  </div>
+
+</template>
+
+<script type = "text/javascript" >
+export default {
+}
+
+</script>
+<style>
+#main-form{
+
+}
+#in-margin{
+  margin-top: 17pt;
+}
+#bot-buttons{
+  max-width: 225px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+</style>
