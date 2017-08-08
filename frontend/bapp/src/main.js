@@ -5,7 +5,7 @@ import App from './App'
 import VueRouter from 'vue-router'
 import '../semantic/dist/semantic.min.css'
 import LoginForm from './components/LoginForm.vue'
-import DashboardAdmin from './components/DashboardAdmin.vue'
+import DashboardTeacher from './components/DashboardTeacher.vue'
 import IncidentForm from './components/IncidentForm.vue'
 
 Vue.config.productionTip = false
@@ -13,7 +13,7 @@ Vue.config.productionTip = false
 Vue.use(VueRouter)
 
 const routes = [
-  {path: '/', component: DashboardAdmin},
+  {path: '/', component: DashboardTeacher},
   {path: '/newincident', component: IncidentForm},
   {path: '/logout', component: LoginForm}
 
