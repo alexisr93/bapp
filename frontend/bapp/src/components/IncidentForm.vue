@@ -133,6 +133,11 @@
 
 <script type = "text/javascript" >
 export default {
+  head: {
+    script: [
+      { src: '/jq.js' }
+    ]
+  }
 }
 
 </script>

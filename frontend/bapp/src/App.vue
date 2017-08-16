@@ -2,7 +2,7 @@
   <div id="app">
     <div class="ui tabular menu">
       <a class="item active">
-        <router-link to="/">Dashboard</router-link>
+        <router-link to="/dashboardteacher">Dashboard</router-link>
       </a>
       <a class="item">
         <router-link to="/newincident">New Incident</router-link>
@@ -18,10 +18,9 @@
 </template>
 
 <script>
-
 export default {
   name: 'app'
-  // data function avails data to the template
+
 }
 </script>
 

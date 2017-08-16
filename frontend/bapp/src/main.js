@@ -2,6 +2,7 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
+import VueResource from 'vue-resource'
 import VueRouter from 'vue-router'
 import '../semantic/dist/semantic.min.css'
 import LoginForm from './components/LoginForm.vue'
@@ -10,10 +11,11 @@ import IncidentForm from './components/IncidentForm.vue'
 
 Vue.config.productionTip = false
 
+Vue.use(VueResource)
 Vue.use(VueRouter)
 
 const routes = [
-  {path: '/', component: DashboardTeacher},
+  {path: '/dashboardteacher', component: DashboardTeacher},
   {path: '/newincident', component: IncidentForm},
   {path: '/logout', component: LoginForm}
 

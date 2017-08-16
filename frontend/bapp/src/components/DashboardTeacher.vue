@@ -1,19 +1,6 @@
 <template>
   <div>
-    <div id="top-dash-options">
-      <div class="ui search" id="search-bar">
-        <div class="ui icon input">
-          <input class="prompt" type="text" placeholder="Find Incident...">
-          <i class="search icon"></i>
-        </div>
-        <div class="results"></div>
-      </div>
-      <div class="extra content" id="top-dash-buttons">
-        <button class="ui button">View Pending</button>
-        <button class="ui button">Print All</button>
-      </div>
-    </div>
-    <div class="ui message">
+    <div class="ui message" v-for="student in students">
       <div class="content">
         <div class="header">Incident</div>
       </div>
@@ -22,8 +9,8 @@
         <div class="ui small feed">
           <div class="event">
             <div class="content">
-              <div class="summary">
-                <a>Elliot Fu</a> added <a>Jenny Hess</a> to the project
+              <div class="summary" >
+                <a>{{student.name}}</a> </a> was <a> {{incidents}}</a>
               </div>
             </div>
           </div>
@@ -35,162 +22,34 @@
           <div class="event">
             <div class="content">
               <div class="summary">
-                <a>Elliot Fu</a> added <a>Jenny Hess</a> to the project
+                <a>Current Status</a> {{status}}
               </div>
             </div>
           </div>
         </div>
       </div>
       <div class="extra content" id="bot-dash-buttons">
-        <button class="ui button">View</button>
-        <button class="ui button">Print</button>
-        <button class="ui button">Cancel</button>
-      </div>
-    </div>
-
-    <div class="ui message">
-      <div class="content">
-        <div class="header">Incident</div>
-      </div>
-      <div class="content">
-        <h4 class="ui sub header">Summary</h4>
-        <div class="ui small feed">
-          <div class="event">
-            <div class="content">
-              <div class="summary">
-                <a>Elliot Fu</a> added <a>Jenny Hess</a> to the project
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="content">
-        <h4 class="ui sub header">Status</h4>
-        <div class="ui small feed">
-          <div class="event">
-            <div class="content">
-              <div class="summary">
-                <a>Elliot Fu</a> added <a>Jenny Hess</a> to the project
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="extra content" id="bot-dash-buttons">
-        <button class="ui button">View</button>
-        <button class="ui button">Print</button>
-        <button class="ui button">Cancel</button>
-      </div>
-    </div>
-
-    <div class="ui message">
-      <div class="content">
-        <div class="header">Incident</div>
-      </div>
-      <div class="content">
-        <h4 class="ui sub header">Summary</h4>
-        <div class="ui small feed">
-          <div class="event">
-            <div class="content">
-              <div class="summary">
-                <a>Elliot Fu</a> added <a>Jenny Hess</a> to the project
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="content">
-        <h4 class="ui sub header">Status</h4>
-        <div class="ui small feed">
-          <div class="event">
-            <div class="content">
-              <div class="summary">
-                <a>Elliot Fu</a> added <a>Jenny Hess</a> to the project
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="extra content" id="bot-dash-buttons">
-        <button class="ui button">View</button>
-        <button class="ui button">Print</button>
-        <button class="ui button">Cancel</button>
-      </div>
-    </div>
-
-    <div class="ui message">
-      <div class="content">
-        <div class="header">Incident</div>
-      </div>
-      <div class="content">
-        <h4 class="ui sub header">Summary</h4>
-        <div class="ui small feed">
-          <div class="event">
-            <div class="content">
-              <div class="summary">
-                <a>Elliot Fu</a> added <a>Jenny Hess</a> to the project
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="content">
-        <h4 class="ui sub header">Status</h4>
-        <div class="ui small feed">
-          <div class="event">
-            <div class="content">
-              <div class="summary">
-                <a>Elliot Fu</a> added <a>Jenny Hess</a> to the project
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="extra content" id="bot-dash-buttons">
-        <button class="ui button">View</button>
-        <button class="ui button">Print</button>
-        <button class="ui button">Cancel</button>
-      </div>
-    </div>
-
-    <div class="ui message">
-      <div class="content">
-        <div class="header">Incident</div>
-      </div>
-      <div class="content">
-        <h4 class="ui sub header">Summary</h4>
-        <div class="ui small feed">
-          <div class="event">
-            <div class="content">
-              <div class="summary">
-                <a>Elliot Fu</a> added <a>Jenny Hess</a> to the project
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="content">
-        <h4 class="ui sub header">Status</h4>
-        <div class="ui small feed">
-          <div class="event">
-            <div class="content">
-              <div class="summary">
-                <a>Elliot Fu</a> added <a>Jenny Hess</a> to the project
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="extra content" id="bot-dash-buttons">
-        <button class="ui button">View</button>
-        <button class="ui button">Print</button>
-        <button class="ui button">Cancel</button>
+        <button class="ui button">View Details</button>
+        <button class="ui button">Change Status</button>
       </div>
     </div>
   </div>
 </template>
 <script type="text/javascript">
 export default {
+  data () {
+    return {
+      students: [],
+      student: '',
+      incidents: []
+    }
+  },
+  created: function () {
+    this.$http.get('http://jsonplaceholder.typicode.com/users')
+      .then(response => {
+        this.students = response.data
+      })
+  }
 
 }
 </script>
