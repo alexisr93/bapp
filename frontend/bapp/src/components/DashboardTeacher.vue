@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="ui message" v-for="student in students">
+    <div class="ui message" v-for="incident in incidents">
       <div class="content">
         <div class="header">Incident</div>
       </div>
@@ -10,7 +10,7 @@
           <div class="event">
             <div class="content">
               <div class="summary" >
-                <a>{{student.name}}</a> </a> was <a> {{incidents}}</a>
+                <a>{{incident.student_first_name}} {{incident.student_last_name}}</a> in grade {{incident.student_grade}} recieved a {{incident.incident_type}}
               </div>
             </div>
           </div>
@@ -22,7 +22,7 @@
           <div class="event">
             <div class="content">
               <div class="summary">
-                <a>Current Status</a> {{status}}
+                {{incident.status}}
               </div>
             </div>
           </div>
@@ -39,15 +39,15 @@
 export default {
   data () {
     return {
-      students: [],
-      student: '',
-      incidents: []
+      incidents: [],
+      incident: ''
     }
   },
   created: function () {
-    this.$http.get('http://jsonplaceholder.typicode.com/users')
+    this.$http.get('http://localhost:8010/api/incidents')
       .then(response => {
-        this.students = response.data
+        console.log(response.data)
+        this.incidents = response.data
       })
   }
 

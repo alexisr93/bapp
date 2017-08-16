@@ -21,9 +21,9 @@
           <label>Grade</label>
           <select class="ui fluid dropdown">
             <option value=""></option>
-            <option value="AL">6</option>
-            <option value="AK">7</option>
-            <option value="AZ">8</option>
+            <option value="AL">6th</option>
+            <option value="AK">7th</option>
+            <option value="AZ">8th</option>
           </select>
         </div>
         <div class="field">

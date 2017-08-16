@@ -1,13 +1,16 @@
+var cors = require('cors')
 var express    = require('express');
 var app        = express();
 var bodyParser = require('body-parser');
 var incident_id_count = 0;
 // configure app to use bodyParser()
 // this will let us get the data from a POST
+
+app.use(cors())
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-var port = process.env.PORT || 8080;
+var port = process.env.PORT || 8010;
 
 //API Routes
 var router = express.Router();
@@ -150,7 +153,7 @@ router.route('/students/:student_id')
         }
         student.student_first_name = req.body.fname;
         student.student_last_name = req.body.lname;
-        
+
         student.save(function(err) {
             if (err){
                 res.send(err);
