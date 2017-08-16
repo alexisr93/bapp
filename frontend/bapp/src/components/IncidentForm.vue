@@ -6,20 +6,20 @@
         <label> Student Name</label>
         <div class="three fields">
           <div class="field">
-            <input type="text" name="student[first-name]" placeholder="First Name">
+            <input type="text" name="student[first-name]" placeholder="First Name" v-model="newIncident.student_first_name">
           </div>
           <div class="field">
-            <input type="text" name="student[middle-name]" placeholder="Middle Name">
+            <input type="text" name="student[middle-name]" placeholder="Middle Name" v-model="newIncident.student_middle_name">
           </div>
           <div class="field">
-            <input type="text" name="student[last-name]" placeholder="Last Name">
+            <input type="text" name="student[last-name]" placeholder="Last Name"v-model="newIncident.student_last_name">
           </div>
         </div>
       </div>
       <div class="two fields">
         <div class="field">
           <label>Grade</label>
-          <select class="ui fluid dropdown">
+          <select class="ui fluid dropdown" v-model="newIncident.student_grade">
             <option value=""></option>
             <option value="AL">6th</option>
             <option value="AK">7th</option>
@@ -28,7 +28,7 @@
         </div>
         <div class="field">
           <label>Incident Type</label>
-          <select class="ui fluid dropdown">
+          <select class="ui fluid dropdown" v-model="newIncident.incident_type">
             <option value=""></option>
             <option value="Referral">Referral</option>
             <option value="Other">Other</option>
@@ -120,7 +120,7 @@
       </div>
       <div class="field" id="bot-buttons">
         <h4 class="ui dividing header"></h4>
-        <div class="ui button" tabindex="">Submit</div>
+        <div class="ui button" tabindex="" v-on:click="submitIncident">Submit</div>
         <div class="ui button" tabindex="">Reset Form</div>
       </div>
 
@@ -133,10 +133,24 @@
 
 <script type = "text/javascript" >
 export default {
-  head: {
-    script: [
-      { src: '/jq.js' }
-    ]
+  data () {
+    return {
+      newIncident: {
+        student_first_name: '',
+        student_middle_name: '',
+        student_last_name: ''
+
+      }
+    }
+  },
+  methods: {
+    submitIncident: function () {
+      var data = this.newIncident
+      this.$http.post('http://localhost:8010/api/incidents', data)
+      .then(response => {
+        console.log(data, 'POST was successful')
+      })
+    }
   }
 }
 

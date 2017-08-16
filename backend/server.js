@@ -2,7 +2,11 @@ var cors = require('cors')
 var express    = require('express');
 var app        = express();
 var bodyParser = require('body-parser');
-var incident_id_count = 0;
+
+var d = new Date();
+var n = d.getTime();
+
+var incident_id_count = n;
 // configure app to use bodyParser()
 // this will let us get the data from a POST
 
@@ -19,7 +23,7 @@ var router = express.Router();
 app.use('/api', router);
 
 router.use(function(req, res, next) {
-    console.log('Something touched the API ! D:');
+    console.log('Something touched the API ! D:' + d);
     next(); // use next() to go to the next route without stopping here
 });
 

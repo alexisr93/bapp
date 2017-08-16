@@ -5,6 +5,7 @@ var IncidentSchema = new Schema({
     incident_id: Number,
     student_id: Number,
     student_first_name: String,
+    student_middle_name: String,
     student_last_name: String,
     student_grade: Number,
     incidents: {
