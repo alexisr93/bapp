@@ -29,8 +29,8 @@
         </div>
       </div>
       <div class="extra content" id="bot-dash-buttons">
-        <button class="ui button">View Details</button>
-        <button class="ui button">Change Status</button>
+        <button class="ui button"> <router-link to="/dashboardteacher/viewincident">View Details</router-link></button>
+        <button class="ui button">Update</button>
       </div>
     </div>
   </div>

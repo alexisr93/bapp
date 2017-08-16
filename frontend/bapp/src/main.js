@@ -8,6 +8,7 @@ import '../semantic/dist/semantic.min.css'
 import LoginForm from './components/LoginForm.vue'
 import DashboardTeacher from './components/DashboardTeacher.vue'
 import IncidentForm from './components/IncidentForm.vue'
+import ViewIncident from './components/ViewIncident.vue'
 
 Vue.config.productionTip = false
 
@@ -16,6 +17,7 @@ Vue.use(VueRouter)
 
 const routes = [
   {path: '/dashboardteacher', component: DashboardTeacher},
+  {path: '/dashboardteacher/viewincident', component: ViewIncident},
   {path: '/newincident', component: IncidentForm},
   {path: '/logout', component: LoginForm}
 
