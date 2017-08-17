@@ -35,11 +35,12 @@ router.route('/incidents')
 //Creates a new incident
 .post(function(req, res) {
     var incident = new Incident();      // creates new instance of the Incident model
-    incident.incident_id = incident_id_count;  // sets tings (comes from the request)
-    incident.student_first_name = req.body.fname;
-    incident.student_last_name = req.body.lname;
-    incident.student_grade = req.body.grade;
-    incident.incidents.referral_incident.class_period = req.body.classperiod;
+    incident.incident_id = incident_id_count;  // sets things (comes from the request)
+    incident.student_first_name = req.body.student_first_name;
+    incident.student_middle_name = req.body.student_middle_name;
+    incident.student_last_name = req.body.student_last_name;
+    incident.student_grade = req.body.student_grade;
+    //incident.incidents.referral_incident.class_period = req.body.classperiod;
 
     incident_id_count = incident_id_count + 1;
     // save the student and check for errors
