@@ -5,7 +5,7 @@
       <div class="ui stacked secondary  segment">
         <h2 class="ui image header">
           <div class="content">
-            Behavior Mangement System
+            Behavior Tracking System
           </div>
         </h2>
         <div class="field" id="top-login-seg">
