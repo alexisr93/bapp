@@ -40,7 +40,16 @@ router.route('/incidents')
     incident.student_middle_name = req.body.student_middle_name;
     incident.student_last_name = req.body.student_last_name;
     incident.student_grade = req.body.student_grade;
-    //incident.incidents.referral_incident.class_period = req.body.classperiod;
+    incident.incident_type = req.body.incident_type;
+    incident.date_of_incident = req.body.date_of_incident;
+    incident.class_period = req.body.class_period;
+    incident.specific_behaviors = req.body.specific_behaviors;
+    incident.previous_interventions = req.body.previous_interventions;
+    incident.specific_information = req.body.specific_information;
+    incident.action_taken_by_admin = req.body.action_taken_by_admin;
+    incident.parent_requests = req.body.parent_requests;
+    incident.teacher_comments = req.body.teacher_comments;
+    incident.admin_comments = req.body.admin_comments;
 
     incident_id_count = incident_id_count + 1;
     // save the student and check for errors

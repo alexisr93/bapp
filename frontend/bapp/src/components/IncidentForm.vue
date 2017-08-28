@@ -39,7 +39,7 @@
       <div class="four fields">
         <div class="field">
           <label>Date of Incident</label>
-          <select class="ui fluid dropdown" v-model="newIncident.incident_details.date_of_incident">
+          <select class="ui fluid dropdown" v-model="newIncident.date_of_incident">
             <option value="">Month</option>
             <option value="Jan">January</option>
             <option value="Feb">February</option>
@@ -140,28 +140,16 @@ export default {
         student_middle_name: '',
         student_last_name: '',
         student_grade: '',
-        incident_details: {
-          referral_incident: {
-            r_incident_id: '',
-            referring_staff: '',
-            class_period: '',
-            date_of_incident: '',
-            problem_behavior: '',
-            specific_information: '',
-            previous_teacher_intervention: '',
-            action_taken_by_administration: '',
-            parent_requests: ''
-          },
-          other_incident: {
-            o_incident_id: '',
-            reporting_staff: '',
-            date_of_incident: '',
-            class_period: '',
-            teacher_comments: [''],
-            admin_comments: ['']
-          }
-        }
-
+        incident_type: '',
+        date_of_incident: '',
+        class_period: '',
+        specific_behaviors: '',
+        previous_interventions: '',
+        specific_information: '',
+        action_taken_by_admin: '',
+        parent_requests: '',
+        teacher_comments: '',
+        admin_comments: ''
       }
     }
   },
