@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-    <h4>Student Name:  Grade:  Incident Date:  Incident Type:</h4>
+    <h4>Student Name: {{incident.student_first_name}} {{incident.student_middle_name}} {{incident.student_last_name}}  Grade: {{incident.student_grade}} Incident Date:  Incident Type:</h4>
 
     </div>
   </div>
