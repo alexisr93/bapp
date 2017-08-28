@@ -6,7 +6,7 @@
       </a>
       <a class="item">
         <router-link to="/newincident">New Incident</router-link>
-      </a></a>
+      </a>
       <div class="right menu"><a class="ui item">
         <router-link to="/logout">Logout</router-link>
       </a>

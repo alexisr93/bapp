@@ -9,6 +9,7 @@ import LoginForm from './components/LoginForm.vue'
 import DashboardTeacher from './components/DashboardTeacher.vue'
 import IncidentForm from './components/IncidentForm.vue'
 import ViewIncident from './components/ViewIncident.vue'
+import UpdateIncident from './components/UpdateIncident.vue'
 
 Vue.config.productionTip = false
 
@@ -18,6 +19,7 @@ Vue.use(VueRouter)
 const routes = [
   {path: '/dashboardteacher', component: DashboardTeacher},
   {path: '/dashboardteacher/viewincident', component: ViewIncident},
+  {path: '/dashboardteacher/UpdateIncident', component: UpdateIncident},
   {path: '/newincident', component: IncidentForm},
   {path: '/logout', component: LoginForm}
 

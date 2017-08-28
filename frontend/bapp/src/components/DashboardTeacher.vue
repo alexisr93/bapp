@@ -39,7 +39,7 @@
       </div>
       <div class="extra content" id="bot-dash-buttons">
         <button  class="ui button"> <router-link to="/dashboardteacher/viewincident">View Details</router-link></button>
-        <button id="bottom-button" class="ui button">Update</button>
+        <button class="ui button" id="bottom-button"> <router-link to="/dashboardkteacher/updateincident"> Update</router-link></button>
       </div>
     </div>
   </div>
